@@ -3,6 +3,8 @@ import { VStack, Image, Text, Center,Heading } from "native-base";
 import LogoSvg from "../assets/img/logo.svg";
 import BackgroundImg from "../assets/img/background.png";
 
+import { Input } from "../componets/Input";
+
 export const SignIn = () => {
   return (
     <VStack flex={1} bg="gray.700">
@@ -26,6 +28,9 @@ export const SignIn = () => {
           Acesse a conta
         </Heading>
       </Center>
+
+      <Input placeholder="E-mail" />
+      <Input placeholder="Senha" />
     </VStack>
   );
 };
