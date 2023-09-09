@@ -12,7 +12,12 @@ export const Input = ({ ...rest }: IInputProps) => {
       fontFamily="body"
       color="white"
       placeholderTextColor="gray.300"
+      _focus={{
+        bgColor: 'gray.700',
+        borderWidth: 1,
+        borderColor: 'green.500'
+      }}
       {...rest}
     />
   );
-}
+};
