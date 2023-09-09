@@ -2,9 +2,10 @@ import { Button as ButtonNativeBase, IButtonProps, Text } from "native-base";
 
 type ButtonProps = IButtonProps & {
   title: string;
+  variant?: "solid" | "outline";
 }
 
-export const Button = ({ title, variant, ...rest }: ButtonProps) => {
+export const Button = ({ title, variant = "solid", ...rest }: ButtonProps) => {
   return (
     <ButtonNativeBase
       bg={variant === "outline" ? "transparent" : "green.700"}

@@ -42,7 +42,8 @@ export const SignIn = () => {
         secureTextEntry
       />
 
-      <Button title="Acessar" variant="outline"/>
+      <Button title="Acessar" />
+      <Button title="Criar conta" variant="outline" />
     </VStack>
   );
 };
