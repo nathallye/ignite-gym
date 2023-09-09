@@ -42,7 +42,7 @@ export const SignIn = () => {
         secureTextEntry
       />
 
-      <Button title="Entrar"/>
+      <Button title="Acessar"/>
     </VStack>
   );
 };
