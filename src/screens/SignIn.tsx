@@ -4,6 +4,7 @@ import LogoSvg from "../assets/img/logo.svg";
 import BackgroundImg from "../assets/img/background.png";
 
 import { Input } from "../componets/Input";
+import { Button } from "../componets/Button";
 
 export const SignIn = () => {
   return (
@@ -35,11 +36,13 @@ export const SignIn = () => {
           autoCapitalize="none"
 
       />
-      
+
       <Input 
         placeholder="Senha" 
         secureTextEntry
       />
+
+      <Button title="Entrar"/>
     </VStack>
   );
 };
