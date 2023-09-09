@@ -1,15 +1,17 @@
-import {StatusBar, Text, View} from 'react-native';
+import { StatusBar } from 'react-native';
+import { NativeBaseProvider } from 'native-base';
+import { Loading } from './src/componets/Loading';
 
 const App = () => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#202024' }}>
+    <NativeBaseProvider>
       <StatusBar 
         barStyle={'light-content'}
         backgroundColor='transparent'
         translucent
       />
-      <Text style={{ fontFamily: 'Roboto-Bold', fontWeight: '400', color: '#fff' }}>App</Text>
-    </View>
+        
+    </NativeBaseProvider>
   );
 };
 

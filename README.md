@@ -263,31 +263,44 @@ npm install @react-navigation/native-stack
 > npm install @react-native-async-storage/async-storage
 ```
 
-### Utilizando o Async - Storage Armazenando novos grupos
+### Instalação Component Library NativeBase
 
-- Primeiramente, vamos criar o arquivo de configuração (storage/storageConfig.ts) com as definições (de chaves) seguintes:
+#### Novo Projeto
 
-``` TS
-// const GROUP_COLLECTION = '@ignite-teams:groups';
+Criar um novo projeto usando React Native CLI com TypeScript e modelo Native Base:
 
-// export { GROUP_COLLECTION }
+```
+npx react-native init MyApp --template @native-base/react-native-template-typescript
 ```
 
-- Feito isso, dentro de `src` vamos criar a pasta `storage` e dentro dela arquivo `group/groupCreate.ts` com as definições seguintes:
+#### Projeto Existente
 
-``` TS
-// import AsyncStorage from '@react-native-async-storage/async-storage';
+1- Instalar o Native Base:
 
-// import { GROUP_COLLECTION } from '@storage/storageConfig';
-
-// export const groupCreate = async (newGroup: string) => {
-//   try {
-//     // AsyncStorage.setItem - para criar um registro
-//     // chave GROUP_COLLECTION, valor newGroup
-//     await AsyncStorage.setItem(GROUP_COLLECTION, newGroup);
-//   } catch (error) {
-//     throw error;
-//   }
-// }
+```
+npm install native-base react-native-svg@12.1.1 react-native-safe-area-context@3.3.2
 ```
 
+2- Rodar a instalação do pod:
+
+```
+cd ios/
+pod install
+```
+
+#### Utilizando:
+
+- Colocar o código abaixo no App.tsx:
+
+``` TSX
+import React from "react";
+import { NativeBaseProvider, Box } from "native-base";
+
+export default function App() {
+  return (
+    <NativeBaseProvider>
+      <Box>Hello world</Box>
+    </NativeBaseProvider>
+  );
+}
+```
