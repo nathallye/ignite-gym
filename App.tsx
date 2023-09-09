@@ -4,7 +4,8 @@ import { NativeBaseProvider } from "native-base";
 import { THEME } from "./src/theme";
 
 // import { Loading } from "./src/componets/Loading";
-import { SignIn } from "@screens/SignIn";
+// import { SignIn } from "@screens/SignIn";
+import { SignUp } from "@screens/SignUp";
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
       />
         
       {/* <Loading /> */}
-      <SignIn />
+      {/* <SignIn /> */}
+      <SignUp />
     </NativeBaseProvider>
   );
 };

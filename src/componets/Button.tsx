@@ -28,4 +28,4 @@ export const Button = ({ title, variant = "solid", ...rest }: ButtonProps) => {
       </Text>
     </ButtonNativeBase>
   );
-}
+};
