@@ -126,6 +126,48 @@ module.exports = {
 }
 ```
 
+## Instalação Component Library NativeBase
+
+### Novo Projeto
+
+Criar um novo projeto usando React Native CLI com TypeScript e modelo Native Base:
+
+```
+> npx react-native init MyApp --template @native-base/react-native-template-typescript
+```
+
+### Projeto Existente
+
+1- Instalar o Native Base:
+
+```
+> npm install native-base react-native-svg@12.1.1 react-native-safe-area-context@3.3.2
+```
+
+2- Rodar a instalação do pod:
+
+```
+> cd ios/
+> pod install
+```
+
+### Utilizando:
+
+- Colocar o código abaixo no App.tsx:
+
+``` TSX
+import React from "react";
+import { NativeBaseProvider, Box } from "native-base";
+
+export default function App() {
+  return (
+    <NativeBaseProvider>
+      <Box>Hello world</Box>
+    </NativeBaseProvider>
+  );
+}
+```
+
 ## Tipos de Navegação
 
 - Stack Navigator
@@ -188,37 +230,31 @@ npm install @react-navigation/native-stack
 
 ### Criando uma navegação com Stack Navigator
 
-- Primeiramente, dentro de `src` vamos criar o arquivo `routes/app.routes.tsx` e adicionar as configurações de rotas dentro dele:
+- Primeiramente, dentro de `src` vamos criar o arquivo `routes/auth.routes.tsx`(rota de autenticação) e adicionar as configurações de rotas dentro dele:
 
 ``` TSX
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-// import { Groups } from '@screens/Groups';
-// import { NewGroup } from '@screens/NewGroup';
-// import { Players } from '@screens/Players';
+import { SignIn } from "@screens/SignIn";
+import { SignUp } from "@screens/SignUp";
 
-// const { Navigator, Screen } = createNativeStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 
-// export const AppRoutes = () => {
-//   return(
-//     <Navigator>
-//       <Screen
-//         name='groups'
-//         component={Groups}
-//       />
+export const AuthRoutes = () => {
+  return (
+    <Navigator>
+      <Screen
+        name="signIn"
+        component={SignIn}
+      />
 
-//       <Screen
-//         name='new'
-//         component={NewGroup}
-//       />
-
-//       <Screen
-//         name='players'
-//         component={Players}
-//       />
-//     </Navigator>
-//   );
-// }
+      <Screen
+        name="signUp"
+        component={SignUp}
+      />
+    </Navigator>
+  );
+};
 ```
 
 ### Compreendendo o Prop Drilling
@@ -261,46 +297,4 @@ npm install @react-navigation/native-stack
 
 ```
 > npm install @react-native-async-storage/async-storage
-```
-
-### Instalação Component Library NativeBase
-
-#### Novo Projeto
-
-Criar um novo projeto usando React Native CLI com TypeScript e modelo Native Base:
-
-```
-npx react-native init MyApp --template @native-base/react-native-template-typescript
-```
-
-#### Projeto Existente
-
-1- Instalar o Native Base:
-
-```
-npm install native-base react-native-svg@12.1.1 react-native-safe-area-context@3.3.2
-```
-
-2- Rodar a instalação do pod:
-
-```
-cd ios/
-pod install
-```
-
-#### Utilizando:
-
-- Colocar o código abaixo no App.tsx:
-
-``` TSX
-import React from "react";
-import { NativeBaseProvider, Box } from "native-base";
-
-export default function App() {
-  return (
-    <NativeBaseProvider>
-      <Box>Hello world</Box>
-    </NativeBaseProvider>
-  );
-}
 ```
