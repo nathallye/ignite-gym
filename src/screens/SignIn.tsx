@@ -3,8 +3,8 @@ import { ScrollView, VStack, Image, Text, Center,Heading } from "native-base";
 import LogoSvg from "../assets/img/logo.svg";
 import BackgroundImg from "../assets/img/background.png";
 
-import { Input } from "../componets/Input";
-import { Button } from "../componets/Button";
+import { Input } from "../components/Input";
+import { Button } from "../components/Button";
 
 export const SignIn = () => {
   return (
@@ -30,14 +30,14 @@ export const SignIn = () => {
             Acesse a conta
           </Heading>
 
-          <Input 
-            placeholder="E-mail" 
+          <Input
+            placeholder="E-mail"
             keyboardType="email-address"
             autoCapitalize="none"
           />
 
-          <Input 
-            placeholder="Senha" 
+          <Input
+            placeholder="Senha"
             secureTextEntry
           />
 
