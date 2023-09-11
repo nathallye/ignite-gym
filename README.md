@@ -273,6 +273,33 @@ export const Routes = () => {
 }
 ```
 
+- Feito isso, podemos importar o componente `Routes` no componente principal (`App.tsx`):
+
+``` TSX
+import { StatusBar } from "react-native";
+import { NativeBaseProvider } from "native-base";
+
+import { THEME } from "./src/theme";
+
+import { Routes } from "@routes/index";
+
+const App = () => {
+  return (
+    <NativeBaseProvider theme={THEME}>
+      <StatusBar
+        barStyle={"light-content"}
+        backgroundColor="transparent"
+        translucent
+      />
+
+      <Routes />
+    </NativeBaseProvider>
+  );
+};
+
+export default App;
+```
+
 ### Compreendendo o Prop Drilling
 
 - É quando passamos uma props, de um pai, para um filho, o filho passa para o filho dele e assim por diante.

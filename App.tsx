@@ -3,9 +3,7 @@ import { NativeBaseProvider } from "native-base";
 
 import { THEME } from "./src/theme";
 
-// import { Loading } from "@components/Loading";
-// import { SignIn } from "@screens/SignIn";
-import { SignUp } from "@screens/SignUp";
+import { Routes } from "@routes/index";
 
 const App = () => {
   return (
@@ -16,9 +14,7 @@ const App = () => {
         translucent
       />
 
-      {/* <Loading /> */}
-      {/* <SignIn /> */}
-      <SignUp />
+      <Routes />
     </NativeBaseProvider>
   );
 };
