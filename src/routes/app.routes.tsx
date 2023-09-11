@@ -1,9 +1,9 @@
 import { useTheme } from "native-base";
 import { BottomTabNavigationProp, createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import HomeSvg from '@assets/img/home.svg';
-import HistorySvg from '@assets/img/history.svg';
-import ProfileSvg from '@assets/img/profile.svg'
+import HomeSvg from "@assets/img/home.svg";
+import HistorySvg from "@assets/img/history.svg";
+import ProfileSvg from "@assets/img/profile.svg"
 
 import { Home } from "@screens/Home";
 import { Exercise } from "@screens/Exercise";
@@ -32,7 +32,7 @@ export const AppRoutes = () => {
         name="home"
         component={Home}
         options={{
-          tabBarIcon: ({ color,  }) => (
+          tabBarIcon: ({ color }) => (
             <HomeSvg fill={color} width={iconSize} height={iconSize} />
           )
         }}
