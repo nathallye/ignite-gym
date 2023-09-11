@@ -257,6 +257,22 @@ export const AuthRoutes = () => {
 };
 ```
 
+- Em seguida, vamos criar um arquivo index (`rountes/index.tsx`) com o contexto das rotas:
+
+``` TSX
+import { NavigationContainer } from "@react-navigation/native";
+
+import { AuthRoutes } from "./auth.routes";
+
+export const Routes = () => {
+  return (
+    <NavigationContainer>
+      <AuthRoutes />
+    </NavigationContainer>
+  );
+}
+```
+
 ### Compreendendo o Prop Drilling
 
 - É quando passamos uma props, de um pai, para um filho, o filho passa para o filho dele e assim por diante.
