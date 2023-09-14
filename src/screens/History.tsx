@@ -1,4 +1,4 @@
-import { Center, Text } from 'native-base';
+import { Center, Text } from "native-base";
 
 export const History = () => {
   return (
