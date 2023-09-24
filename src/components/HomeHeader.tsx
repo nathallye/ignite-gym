@@ -1,4 +1,8 @@
+import React from "react";
+
+import { TouchableOpacity } from "react-native";
 import { Heading, HStack, Text, VStack } from "native-base";
+import { SignOut } from 'phosphor-react-native';
 
 import { UserPhoto } from "./UserPhoto";
 
@@ -20,6 +24,13 @@ export const HomeHeader = () => {
         <Heading color="gray.100" fontSize="md">
           Nathallye
         </Heading>
+
+        <TouchableOpacity>
+          <SignOut
+            color="gray.200"
+            size={7}
+          />
+        </TouchableOpacity>
       </VStack>
     </HStack>
   );
